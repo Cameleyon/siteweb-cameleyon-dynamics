@@ -50,10 +50,6 @@ export default function SolutionsPage() {
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">
               Comment nous intervenons
             </h2>
-            <p className="mt-4 text-base leading-7 text-slate-600">
-              Voici les domaines pour lesquels nous avons déjà une approche plus structurée. Les autres expertises
-              pourront être détaillées au fur et à mesure de l&apos;évolution du site.
-            </p>
           </div>
 
           <div className="mt-10 space-y-6">
