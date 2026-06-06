@@ -31,6 +31,7 @@ export type Product = {
 export const siteConfig = {
   company: {
     name: "CAMELEYON Dynamics",
+    url: "https://www.cameleyondynamics.com",
     logoPath: "/logo-cameleyon-dynamics.png",
     iconPath: "/logo-cameleyon-icon.png",
     tagline: "Consultation, données et solutions SaaS pour des opérations plus claires.",
