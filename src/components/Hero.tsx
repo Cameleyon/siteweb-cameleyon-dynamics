@@ -53,7 +53,7 @@ export function Hero({ eyebrow, title, description, primaryCta, secondaryCta }: 
         <div className="mx-auto flex self-center lg:mx-0 lg:translate-x-12">
           <div className="relative size-72 overflow-hidden rounded-full bg-white shadow-2xl ring-1 ring-white/30 sm:size-80 lg:size-96">
             <Image
-              src={siteConfig.company.browserIconPath}
+              src={siteConfig.company.heroIconPath}
               alt={`Symbole caméléon ${siteConfig.company.name}`}
               fill
               sizes="(min-width: 1024px) 384px, 80vw"
