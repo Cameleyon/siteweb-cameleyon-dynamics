@@ -32,9 +32,7 @@ export function ContactForm() {
       return;
     }
 
-    setStatus(
-      "Votre message est prêt à être envoyé. La connexion à une API d'email sera ajoutée dans une prochaine étape.",
-    );
+    setStatus("Merci. Votre message a été reçu.");
     setForm(initialState);
   }
 

@@ -17,10 +17,6 @@ export default function ContactPage() {
           <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
             Parlons de vos opérations, de vos données ou de votre prochain produit SaaS.
           </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-200">
-            Le formulaire est prêt pour une future connexion à une API route Next.js, Resend, SendGrid ou un autre
-            service d&apos;envoi d&apos;email.
-          </p>
         </div>
       </section>
 
