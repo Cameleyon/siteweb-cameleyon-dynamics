@@ -36,9 +36,9 @@ export const siteConfig = {
     iconPath: "/logo-cameleyon-icon.png",
     browserIconPath: "/icon.png",
     heroIconPath: "/hero-cameleyon-icon.png",
-    tagline: "Consultation, données et solutions SaaS pour des opérations plus claires.",
+    tagline: "Consultation, données et applications pour des opérations plus claires.",
     description:
-      "CAMELEYON Dynamics accompagne les organisations dans l'analyse, l'optimisation et la transformation de leurs opérations grâce aux données, à la recherche opérationnelle et aux produits SaaS.",
+      "CAMELEYON Dynamics accompagne les organisations dans l'analyse, l'optimisation et la transformation de leurs opérations grâce aux données, à la recherche opérationnelle et aux applications.",
     email: "contact@cameleyondynamics.com",
     linkedInUrl: "https://www.linkedin.com/company/cameleyon-dynamics",
     appointmentUrl: "https://calendar.app.google/sFqmvagnRiTY2Ph89",

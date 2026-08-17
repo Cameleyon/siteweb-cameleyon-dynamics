@@ -7,7 +7,7 @@ import { siteConfig } from "@/data/site";
 export const metadata: Metadata = {
   title: "Solutions",
   description:
-    "Services de consultation et produits SaaS de CAMELEYON Dynamics: recherche opérationnelle, données, Power BI, gestion de projet et optimisation.",
+    "Services de consultation et applications de CAMELEYON Dynamics: recherche opérationnelle, données, Power BI, gestion de projet et optimisation.",
 };
 
 export default function SolutionsPage() {
@@ -15,12 +15,12 @@ export default function SolutionsPage() {
     <>
       <section className="bg-slate-950">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-200">Services et produits</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-200">Services et applications</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
             Des solutions pour mieux piloter les opérations et les données.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-200">
-            CAMELEYON Dynamics intervient autant dans la consultation que dans la création de produits SaaS pour aider
+            CAMELEYON Dynamics intervient autant dans la consultation que dans la création d&apos;applications pour aider
             les organisations à gagner en clarté, en efficacité et en capacité de décision.
           </p>
         </div>
@@ -93,8 +93,8 @@ export default function SolutionsPage() {
       <section className="bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Nos produits</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">Produits SaaS</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Nos applications</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">Applications</h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
               Les liens, statuts et descriptions sont centralisés dans le fichier de configuration du site.
             </p>

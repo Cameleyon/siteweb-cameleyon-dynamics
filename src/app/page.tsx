@@ -13,7 +13,7 @@ export default function Home() {
       <Hero
         eyebrow="CAMELEYON Dynamics"
         title="Des décisions plus claires, des opérations mieux structurées."
-        description="Nous aidons les organisations à transformer leurs données, leurs processus et leurs idées en solutions concrètes: consultation analytique, optimisation opérationnelle et produits SaaS évolutifs."
+        description="Nous aidons les organisations à transformer leurs données, leurs processus et leurs idées en solutions concrètes: consultation analytique, optimisation opérationnelle et applications évolutives."
         primaryCta={{ label: "Découvrir nos solutions", href: "/solutions" }}
         secondaryCta={{ label: "Nous contacter", href: "/contact" }}
       />
@@ -57,10 +57,10 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Produits SaaS</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Applications</p>
               <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">Solutions disponibles et à venir</h2>
               <p className="mt-4 text-base leading-7 text-slate-600">
-                Un écosystème de produits pensés pour connecter les opérations, les données et les équipes.
+                Un écosystème d&apos;applications pensées pour connecter les opérations, les données et les équipes.
               </p>
             </div>
             <Link href="/solutions" className="text-sm font-semibold text-indigo-700 hover:text-indigo-900">

@@ -5,7 +5,7 @@ import { siteConfig } from "@/data/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contactez CAMELEYON Dynamics pour une consultation, un produit SaaS, une intégration de données ou un rendez-vous.",
+    "Contactez CAMELEYON Dynamics pour une consultation, une application, une intégration de données ou un rendez-vous.",
 };
 
 export default function ContactPage() {
@@ -15,7 +15,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-200">Contact</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Parlons de vos opérations, de vos données ou de votre prochain produit SaaS.
+            Parlons de vos opérations, de vos données ou de votre prochaine application.
           </h1>
         </div>
       </section>
