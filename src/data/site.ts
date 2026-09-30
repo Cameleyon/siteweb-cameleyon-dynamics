@@ -74,7 +74,7 @@ export const siteConfig = {
     {
       title: "Développement de logiciels",
       description:
-        "Conception de logiciels, plateformes SaaS et produits numériques évolutifs pour centraliser les opérations, les données et les workflows métier.",
+        "Conception de logiciels, applications et plateformes numériques évolutives pour centraliser les opérations, les données et les workflows métier.",
     },
   ] satisfies Service[],
   serviceDetails: [
@@ -226,7 +226,7 @@ export const siteConfig = {
   ] satisfies Product[],
   about: {
     story:
-      "CAMELEYON Dynamics est née d'une conviction simple: les organisations progressent plus vite lorsque leurs données, leurs processus et leurs outils numériques travaillent ensemble. La firme combine consultation stratégique, analyse opérationnelle et développement SaaS pour créer des solutions pratiques et durables.",
+      "CAMELEYON Dynamics est née d'une conviction simple: les organisations progressent plus vite lorsque leurs données, leurs processus et leurs outils numériques travaillent ensemble. La firme combine consultation stratégique, analyse opérationnelle et développement de logiciels pour créer des solutions pratiques et durables.",
     whoWeAre: {
       title: "Qui nous sommes",
       intro: [
@@ -251,7 +251,7 @@ export const siteConfig = {
     ],
     strategicGoals: [
       "Aider les PME à mieux structurer leurs opérations",
-      "Développer des outils SaaS simples, utiles et accessibles",
+      "Développer des applications simples, utiles et accessibles",
       "Offrir des services de consultation basés sur les données",
       "Soutenir la prise de décision par des modèles analytiques et opérationnels",
       "Créer un écosystème de solutions numériques interconnectées",
