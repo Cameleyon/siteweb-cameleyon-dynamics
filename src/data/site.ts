@@ -64,7 +64,7 @@ export const siteConfig = {
     {
       title: "Analyse de données",
       description:
-        "Nettoyage, exploration, analyse prédictive, tableaux de bord, Business Intelligence, rapports Power BI et indicateurs clés.",
+        "Nettoyage, exploration, analyse prédictive, tableaux de bord, Business Intelligence et rapports Power BI.",
     },
     {
       title: "Gestion de projet",
