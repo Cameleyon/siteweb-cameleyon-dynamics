@@ -16,7 +16,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
       <nav
         aria-label="Navigation principale"
-        className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+        className="flex w-full items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
       >
         <Link href="/" className="flex items-center gap-3 font-semibold text-slate-950">
           <span className="relative size-11 overflow-hidden rounded-lg bg-white ring-1 ring-slate-200">
