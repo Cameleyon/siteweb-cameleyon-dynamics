@@ -16,7 +16,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
       <nav
         aria-label="Navigation principale"
-        className="flex w-full items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+        className="flex w-full items-center gap-6 px-4 py-4 sm:px-6 lg:gap-8 lg:px-8"
       >
         <Link href="/" className="flex items-center gap-3 font-semibold text-slate-950">
           <span className="relative size-11 overflow-hidden rounded-lg bg-white ring-1 ring-slate-200">
@@ -34,7 +34,7 @@ export function Navbar() {
             <span className="block text-xs font-medium text-slate-500">Solutions & consultation</span>
           </span>
         </Link>
-        <div className="hidden items-center gap-7 md:flex">
+        <div className="ml-auto hidden items-center gap-7 md:flex">
           {siteConfig.navigation.map((item) => (
             <Link
               key={item.href}
