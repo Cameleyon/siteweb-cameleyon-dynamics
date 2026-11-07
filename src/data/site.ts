@@ -1,7 +1,4 @@
-export type ProductStatus =
-  | "Disponible"
-  | "En développement"
-  | "Bientôt disponible";
+export type ProductStatus = "available" | "development" | "upcoming";
 
 export type Service = {
   title: string;
@@ -21,11 +18,11 @@ export type ServiceDetail = {
 };
 
 export type Product = {
+  id: string;
   name: string;
   description: string;
   status: ProductStatus;
   href: string;
-  cta: string;
 };
 
 export const siteConfig = {
@@ -43,12 +40,6 @@ export const siteConfig = {
     linkedInUrl: "https://www.linkedin.com/company/cameleyon-dynamics",
     appointmentUrl: "https://calendar.app.google/sFqmvagnRiTY2Ph89",
   },
-  navigation: [
-    { label: "Accueil", href: "/" },
-    { label: "Solutions", href: "/solutions" },
-    { label: "À propos", href: "/about" },
-    { label: "Contact", href: "/contact" },
-  ],
   expertise: [
     "Recherche opérationnelle",
     "Analyse de données",
@@ -202,26 +193,26 @@ export const siteConfig = {
   ] satisfies ServiceDetail[],
   products: [
     {
+      id: "erp",
       name: "CAMELEYON ERP",
       description:
         "Solution ERP pour aider les petites et moyennes entreprises à gérer les ventes, l'inventaire, les opérations et les données.",
-      status: "Disponible",
+      status: "available",
       href: "https://erp.cameleyondynamics.com",
-      cta: "Acceder au produit",
     },
     {
+      id: "culinexo",
       name: "Culinexo",
       description: "",
-      status: "En développement",
+      status: "development",
       href: "https://culinexo.cameleyondynamics.com",
-      cta: "Accéder au produit",
     },
     {
+      id: "synova",
       name: "Synova",
       description: "",
-      status: "Bientôt disponible",
+      status: "upcoming",
       href: "https://synova.cameleyondynamics.com",
-      cta: "Accéder au produit",
     },
   ] satisfies Product[],
   about: {

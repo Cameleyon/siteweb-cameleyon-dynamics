@@ -4,33 +4,37 @@ import { Hero } from "@/components/Hero";
 import { ProductCard } from "@/components/ProductCard";
 import { ServiceCard } from "@/components/ServiceCard";
 import { siteConfig } from "@/data/site";
+import { siteContent } from "@/i18n/content";
+import { siteCopy } from "@/i18n/messages";
+import { pageHref, type Locale } from "@/i18n/routes";
 
-export default function Home() {
-  const featuredServices = siteConfig.services;
+export function HomePage({ locale }: { locale: Locale }) {
+  const t = siteCopy(locale);
+  const content = siteContent(locale);
+  const featuredServices = content.services;
 
   return (
     <>
       <Hero
-        eyebrow="CAMELEYON Dynamics"
-        title="Des décisions plus claires, des opérations mieux structurées."
-        description="Nous aidons les organisations à transformer leurs données, leurs processus et leurs idées en solutions concrètes: consultation analytique, optimisation opérationnelle et applications évolutives."
-        primaryCta={{ label: "Découvrir nos solutions", href: "/solutions" }}
-        secondaryCta={{ label: "Nous contacter", href: "/contact" }}
+        eyebrow={siteConfig.company.name}
+        title={t("heroTitle")}
+        description={t("heroDescription")}
+        primaryCta={{ label: t("discover"), href: pageHref(locale, "solutions") }}
+        secondaryCta={{ label: t("contactUs"), href: pageHref(locale, "contact") }}
       />
 
       <section className="bg-white">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Notre mission</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">{t("ourMission")}</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">
-              Accompagner la transformation des opérations par la donnée et la technologie.
+              {t("missionTitle")}
             </h2>
           </div>
           <div className="space-y-5 text-base leading-7 text-slate-600">
-            <p>{siteConfig.company.description}</p>
+            <p>{content.companyDescription}</p>
             <p>
-              CAMELEYON Dynamics combine recherche opérationnelle, analyse de données, gestion de projet et
-              développement de logiciels pour bâtir des outils utiles, simples et adaptés aux réalités des organisations.
+              {t("missionDescription")}
             </p>
           </div>
         </div>
@@ -39,10 +43,10 @@ export default function Home() {
       <section className="bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Expertises</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">Services principaux</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">{t("expertise")}</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">{t("mainServices")}</h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
-              Des interventions ciblées pour comprendre, mesurer, optimiser et automatiser les opérations.
+              {t("mainServicesDescription")}
             </p>
           </div>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -57,18 +61,18 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Applications</p>
-              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">Solutions disponibles et à venir</h2>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">{t("applications")}</p>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">{t("applicationTitle")}</h2>
               <p className="mt-4 text-base leading-7 text-slate-600">
-                Un écosystème d&apos;applications pensées pour connecter les opérations, les données et les équipes.
+                {t("applicationDescription")}
               </p>
             </div>
-            <Link href="/solutions" className="text-sm font-semibold text-indigo-700 hover:text-indigo-900">
-              Voir tous les détails
+            <Link href={pageHref(locale, "solutions")} className="text-sm font-semibold text-indigo-700 hover:text-indigo-900">
+              {t("seeDetails")}
             </Link>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {siteConfig.products.map((product) => (
+            {content.products.map((product) => (
               <ProductCard key={product.name} product={product} />
             ))}
           </div>
@@ -79,9 +83,9 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid gap-5 md:grid-cols-3">
             {[
-              ["Approche claire", "Des diagnostics compréhensibles, des priorités bien structurées et des livrables utiles."],
-              ["Solutions évolutives", "Une architecture pensée pour accueillir paiement, portail client, authentification et intégrations."],
-              ["Impact mesurable", "Des indicateurs, modèles et tableaux de bord orientés vers les décisions concrètes."],
+              [t("clearApproach"), t("clearApproachDescription")],
+              [t("scalableSolutions"), t("scalableSolutionsDescription")],
+              [t("measurableImpact"), t("measurableImpactDescription")],
             ].map(([title, description]) => (
               <article key={title} className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate-200">
                 <h3 className="text-lg font-semibold text-slate-950">{title}</h3>
@@ -92,7 +96,7 @@ export default function Home() {
         </div>
       </section>
 
-      <CTASection />
+      <CTASection locale={locale} />
     </>
   );
 }

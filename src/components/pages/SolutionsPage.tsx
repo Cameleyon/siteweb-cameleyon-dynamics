@@ -1,27 +1,23 @@
-import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
 import { ProductCard } from "@/components/ProductCard";
 import { ServiceCard } from "@/components/ServiceCard";
-import { siteConfig } from "@/data/site";
+import { siteContent } from "@/i18n/content";
+import { siteCopy } from "@/i18n/messages";
+import type { Locale } from "@/i18n/routes";
 
-export const metadata: Metadata = {
-  title: "Solutions",
-  description:
-    "Services de consultation et applications de CAMELEYON Dynamics: recherche opérationnelle, données, Power BI, gestion de projet et optimisation.",
-};
-
-export default function SolutionsPage() {
+export function SolutionsPage({ locale }: { locale: Locale }) {
+  const t = siteCopy(locale);
+  const content = siteContent(locale);
   return (
     <>
       <section className="bg-slate-950">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-200">Services et applications</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-200">{t("serviceApps")}</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Des solutions pour mieux piloter les opérations et les données.
+            {t("solutionsTitle")}
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-200">
-            CAMELEYON Dynamics intervient autant dans la consultation que dans la création d&apos;applications pour aider
-            les organisations à gagner en clarté, en efficacité et en capacité de décision.
+            {t("solutionsDescription")}
           </p>
         </div>
       </section>
@@ -29,14 +25,14 @@ export default function SolutionsPage() {
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Domaines d&apos;expertise</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">Services par domaine</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">{t("fields")}</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">{t("servicesByArea")}</h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
-              Chaque domaine peut être mobilisé séparément ou combiné dans une approche complète de transformation.
+              {t("fieldsDescription")}
             </p>
           </div>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {siteConfig.services.map((service) => (
+            {content.services.map((service) => (
               <ServiceCard key={service.title} service={service} />
             ))}
           </div>
@@ -46,14 +42,14 @@ export default function SolutionsPage() {
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Approche détaillée</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">{t("detailedApproach")}</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">
-              Comment nous intervenons
+              {t("howWeWork")}
             </h2>
           </div>
 
           <div className="mt-10 space-y-6">
-            {siteConfig.serviceDetails.map((service) => (
+            {content.serviceDetails.map((service) => (
               <article key={service.title} className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
                 <div className="grid gap-6 lg:grid-cols-[0.75fr_1.25fr]">
                   <div>
@@ -93,14 +89,14 @@ export default function SolutionsPage() {
       <section className="bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Nos applications</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">Applications</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">{t("ourApps")}</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">{t("applications")}</h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
-              Les liens, statuts et descriptions sont centralisés dans le fichier de configuration du site.
+              {t("appsOverview")}
             </p>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {siteConfig.products.map((product) => (
+            {content.products.map((product) => (
               <ProductCard key={product.name} product={product} />
             ))}
           </div>
@@ -108,8 +104,9 @@ export default function SolutionsPage() {
       </section>
 
       <CTASection
-        title="Vous voulez évaluer une solution ou cadrer un besoin?"
-        description="Planifions une discussion pour identifier les priorités, les données disponibles et le meilleur chemin de mise en oeuvre."
+        locale={locale}
+        title={t("solutionsCtaTitle")}
+        description={t("solutionsCtaDescription")}
       />
     </>
   );

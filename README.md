@@ -13,9 +13,15 @@ Le site sera disponible par défaut sur `http://localhost:3000`.
 
 ## Structure principale
 
-- `src/app/` contient les pages du site: accueil, solutions, à propos et contact.
+- `src/app/` contient les routes du site: accueil, solutions, à propos et contact.
+- `src/components/pages/` contient les pages partagées entre les langues.
 - `src/components/` contient les composants réutilisables: navigation, footer, hero, cartes, CTA et formulaire.
-- `src/data/site.ts` centralise les contenus importants du site.
+- `src/data/site.ts` centralise les données communes et les contenus français.
+- `src/i18n/messages.ts` contient les textes d’interface; `src/i18n/content.ts` contient les traductions des services, des applications et de la présentation de l’entreprise.
+
+## Langues du site
+
+Le français utilise les URL existantes (`/`, `/solutions`, `/about`, `/contact`). L’anglais utilise le préfixe `/en` et l’espagnol `/es`. Le bouton de langue de l’en-tête ouvre la même page dans la langue choisie. Lors d’une mise à jour du contenu, pensez à mettre à jour les trois versions.
 
 ## Modifier les produits
 
@@ -25,9 +31,10 @@ Vous pouvez modifier:
 
 - le nom du produit avec `name`
 - la description avec `description`
-- le statut avec `status`
+- le statut avec `status` (`available`, `development` ou `upcoming`)
 - le lien avec `href`
-- le texte du bouton avec `cta`
+
+Le libellé du bouton et les libellés des statuts sont traduits dans `src/i18n/messages.ts`.
 
 Les liens actuels sont des placeholders et peuvent être remplacés par les vraies URLs des produits.
 
@@ -40,7 +47,7 @@ Chaque service contient:
 - `title`
 - `description`
 
-Les pages se mettent à jour automatiquement à partir de ces données.
+Les pages françaises se mettent à jour automatiquement à partir de ces données. Mettez à jour les versions anglaise et espagnole correspondantes dans `src/i18n/content.ts`.
 
 ## Remplacer les liens placeholders
 
