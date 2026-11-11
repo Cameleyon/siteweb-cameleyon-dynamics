@@ -13,19 +13,19 @@ const translations = {
     services: [
       {
         title: "Operations research",
-        description: "Investigación de operaciones"
+        description: "Decision support, process optimization, resource allocation, scheduling, simulation and mathematical modeling."
       },
       {
         title: "Data analytics",
-        description: "Análisis de datos"
+        description: "Data cleaning and exploration, predictive analytics, dashboards, business intelligence and Power BI reports."
       },
       {
         title: "Project management",
-        description: "Gestión de proyectos"
+        description: "Planning, implementation tracking, performance metrics, coordination and strategic guidance."
       },
       {
         title: "Software development",
-        description: "Desarrollo de software"
+        description: "We design scalable software, applications and digital platforms that bring operations, data and business workflows together."
       }
     ],
     serviceDetails: [
@@ -180,19 +180,19 @@ const translations = {
     companyDescription: "CAMELEYON Dynamics ayuda a las organizaciones a analizar, optimizar y transformar sus operaciones mediante los datos, la investigación de operaciones y las aplicaciones.",
     services: [
       {
-        title: "Decision support, process optimization, resource allocation, scheduling, simulation and mathematical modeling.",
+        title: "Investigación de operaciones",
         description: "Apoyo a la toma de decisiones, optimización de procesos, asignación de recursos, planificación, simulación y modelización matemática."
       },
       {
-        title: "Data cleaning and exploration, predictive analytics, dashboards, business intelligence and Power BI reports.",
+        title: "Análisis de datos",
         description: "Limpieza y exploración de datos, análisis predictivo, paneles, inteligencia empresarial e informes en Power BI."
       },
       {
-        title: "Planning, implementation tracking, performance metrics, coordination and strategic guidance.",
+        title: "Gestión de proyectos",
         description: "Planificación, seguimiento de la ejecución, indicadores de rendimiento, coordinación y asesoría estratégica."
       },
       {
-        title: "We design scalable software, applications and digital platforms that bring operations, data and business workflows together.",
+        title: "Desarrollo de software",
         description: "Diseñamos software, aplicaciones y plataformas digitales escalables que centralizan las operaciones, los datos y los flujos de trabajo."
       }
     ],
