@@ -105,7 +105,7 @@ const messages = {
     "Nuestra misión",
   ],
   missionTitle: [
-    "Accompagner la transformation des opérations par la donnée et la technologie.",
+    "Accompagner la transformation des opérations par les données et la technologie.",
     "Helping organizations transform their operations with data and technology.",
     "Acompañar la transformación de las operaciones mediante los datos y la tecnología.",
   ],
